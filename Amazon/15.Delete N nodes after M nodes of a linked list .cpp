@@ -7,7 +7,7 @@ struct Node
     
     Node(int x){
         data = x;
-        next = NULL;
+        next = nullptr;
     }
     
 };
@@ -21,17 +21,17 @@ class Solution
         Node* current = head;
         while(true) {
             int val = M-1;
-            while(current!=NULL && val--) {
+            while(current!=nullptr && val--) {
                 current = current->next;
             }
-            if(current==NULL) return;
+            if(current==nullptr) return;
             Node* connectingNode = current;
             val = N+1;
-            while(current!=NULL && val--) {
+            while(current!=nullptr && val--) {
                 current = current->next;
             }
-            if(current==NULL) {
-                connectingNode->next = NULL;
+            if(current==nullptr) {
+                connectingNode->next = nullptr;
                 return;
             }
             connectingNode->next = current;
